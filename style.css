@@ -11,9 +11,10 @@ body {
     height: 100vh;  
   }
 
-  .container {
-    display: flex;          /* Enable Flexbox */
-    height: 100vh;          /* Full height of the viewport */
-    justify-content: center;/* Center horizontally */
-    align-items: center;    /* Center vertically */
+.container {
+  display: flex;          /* Enable Flexbox */
+  height: 100vh;          /* Full height of the viewport */
+  justify-content: center;/* Center horizontally */
+  align-items: center;    /* Center vertically */
+  flex-direction: column;
 }
