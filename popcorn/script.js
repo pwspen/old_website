@@ -88,11 +88,16 @@ function popup() {
     var image = document.getElementById("loadingblock");
     image.style.display = "block";
     if (Math.random() > 0.6) {
-        waittime = waittime * 3;
+        var wt = waittime * 3;
     }
+
+    else {
+        var wt = waittime;
+    }
+
     setTimeout(function() {
         image.style.display = "none";
-    }, waittime);
+    }, wt);
 }
 
 function settopnum(stars) {
