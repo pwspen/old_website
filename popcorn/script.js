@@ -43,7 +43,8 @@ function calc2() {
 
     if (input1 > threshold) {
         if (input1 == 6) {
-            alert("6 BAGS IS NOT POSSIBLE. THE SCALE ONLY GOES TO 5.");
+            alert("6 BAGS IS NOT POSSIBLE. THE SCALE ONLY GOES TO 5. you dont deserve this web site.");
+            window.close();
         }
         alert("5 is the maximum number of bags of popcorn...\n despite what some people might say.......");
         document.getElementById('b4').value = -999
@@ -60,12 +61,20 @@ function calc2() {
     popup();
 
     result = Number(input1) * 0.8 - 0.00000001 - 1;
+    if (Math.random() > 0.5) {
     setTimeout(function() {setbotnum(result);}, waittime);
+    }
+    else {
+    setTimeout(function() {alert("ERROR..??");}, waittime * 1.5);
+    }
 }
 
 function popup() {
     var image = document.getElementById("loadingblock");
     image.style.display = "block";
+    if (Math.random() > 0.6) {
+        waittime = waittime * 3;
+    }
     setTimeout(function() {
         image.style.display = "none";
     }, waittime);
@@ -79,5 +88,12 @@ function setbotnum(bags) {
     document.getElementById('b4').value = bags;
 }
 
+function generateerror(){
+    if (Math.random() > 0.99) {
+        alert("An unknown error occurred! Please contact the site administrator.")
+    }
+}
+
+setInterval(generateerror, 1000);
 
   
