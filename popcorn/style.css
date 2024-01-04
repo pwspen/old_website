@@ -26,20 +26,32 @@ body {
     height: 100vh;  
   }
 
-#myImage {
-    width: 500px;
-    height: auto;
-}
-
 #loadingblock {
     display: none;
     position: fixed; /* Fixed position relative to the viewport */
     top: 50%; /* Position at the middle vertically */
     left: 50%; /* Position at the middle horizontally */
     transform: translate(-50%, -50%); /* Adjust the exact center of the element */
-    z-index: 1000; /* Higher z-index value to overlap other elements */
+    z-index: 5; /* Higher z-index value to overlap other elements */
 }
 
+#minion {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    display: none;
+    z-index: 10;
+}
+
+#gandalf {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
 
 body::before {
     content: '';
