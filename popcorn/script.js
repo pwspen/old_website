@@ -117,7 +117,7 @@ const errormessages = [ "G Amato sends his regards.",
 
 function generateerror() {
     if (Math.random() > errorodds) {
-        alert("An unknown error occurred! Please contact the site administrator.\n\nError message: ".concat(errormessages[Math.floor(Math.random()*errormessages.length)]));
+        alert("An error occurred! Please contact the site administrator.\n\nError message: ".concat(errormessages[Math.floor(Math.random()*errormessages.length)]));
     }
 }
 
