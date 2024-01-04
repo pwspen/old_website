@@ -10,3 +10,10 @@ body {
     /* height: 1080; */
     height: 100vh;  
   }
+
+  .container {
+    display: flex;          /* Enable Flexbox */
+    height: 100vh;          /* Full height of the viewport */
+    justify-content: center;/* Center horizontally */
+    align-items: center;    /* Center vertically */
+}
