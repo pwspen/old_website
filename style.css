@@ -1,0 +1,88 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-image {
+    width: 300px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.textbox-area {
+    margin: 0 20px; /* Add some space around the textbox area */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-image: url('image.JPG'); Replace with the path to your image */
+    /* background-repeat: repeat; This allows the image to repeat */
+    /* background-size: 100px 100px; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* width: 1920; */
+    /* height: 1080; */
+    height: 100vh;  
+  }
+
+#myImage {
+    width: 500px;
+    height: auto;
+}
+
+#loadingblock {
+    display: none;
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 50%; /* Position at the middle vertically */
+    left: 50%; /* Position at the middle horizontally */
+    transform: translate(-50%, -50%); /* Adjust the exact center of the element */
+    z-index: 1000; /* Higher z-index value to overlap other elements */
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.png'); /* Replace with the path to your image */
+    background-repeat: repeat;
+    background-size: 100px auto; /* Adjust the size as needed */
+    opacity: 0.2; /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+}
+
+header, nav, main, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+article, aside {
+    width: 45%;
+}
+
+footer {
+    margin-top: 20px;
+} */
