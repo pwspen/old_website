@@ -8,7 +8,7 @@ body {
     padding: 0;
     /* width: 1920; */
     /* height: 1080; */
-    height: 100vh;  
+    height: 100vh;    
   }
 
 .container {
@@ -20,11 +20,36 @@ body {
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; /* spacing between items */
+  margin: 30px auto;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%; /* make image responsive */
+  height: auto;
+}
+
+.grid-item span {
+  display: block; /* ensures the caption is below the image */
+}
+
 .button {
   display: block;
   width: 200px;
   padding: 10px;
-  margin: 5px auto;
+  margin: 20px auto;
   text-align: center;
   background-color: #4CAF50; /* Green background */
   color: white; /* White text */
