@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background-image: url('image.JPG'); Replace with the path to your image */
+    /* background-repeat: repeat; This allows the image to repeat */
+    /* background-size: 100px 100px; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* width: 1920; */
+    /* height: 1080; */
+    height: 100vh;  
+  }
+
+.container {
+  text-align: center;
+  display: flex;          /* Enable Flexbox */
+  height: 100vh;          /* Full height of the viewport */
+  justify-content: center;/* Center horizontally */
+  align-items: center;    /* Center vertically */
+  flex-direction: column;
+}

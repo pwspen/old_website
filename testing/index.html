@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combined Library Examples</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script src="https://unpkg.com/gojs/release/go.js"></script>
+    <style>
+        #network, #myDiagramDiv {
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>D3.js Tree Example</h2>
+    <svg width="400" height="200"></svg>
+
+    <h2>vis.js Network Example</h2>
+    <div id="network" style="width: 400px; height: 200px;"></div>
+
+    <h2>GoJS Diagram Example</h2>
+    <div id="myDiagramDiv" style="width: 400px; height: 200px;"></div>
+
+    <script>
+        // D3.js Example
+        var treeData = {
+            "name": "Root",
+            "children": [
+                { "name": "Child 1" },
+                { "name": "Child 2" }
+            ]
+        };
+        var treeLayout = d3.tree().size([400, 200]);
+        var root = d3.hierarchy(treeData);
+        treeLayout(root);
+        d3.select('svg')
+            .selectAll('circle')
+            .data(root.descendants())
+            .enter()
+            .append('circle')
+            .attr('cx', function(d) { return d.x; })
+            .attr('cy', function(d) { return d.y; })
+            .attr('r', 5);
+
+        // vis.js Example
+        var nodes = new vis.DataSet([
+            { id: 1, label: "Root" },
+            { id: 2, label: "Child 1" },
+            { id: 3, label: "Child 2" },
+            { id: 4, label: "Child 3" }
+        ]);
+        var edges = new vis.DataSet([
+            { from: 1, to: 2 },
+            { from: 1, to: 3 },
+            { from: 1, to: 4 }
+        ]);
+        var container = document.getElementById('network');
+        var networkData = {
+            nodes: nodes,
+            edges: edges
+        };
+        var networkOptions = {
+            layout: { hierarchical: { direction: "UD" } }
+        };
+        var network = new vis.Network(container, networkData, networkOptions);
+
+        // GoJS Example
+        var $ = go.GraphObject.make;
+        var myDiagram = $(go.Diagram, "myDiagramDiv");
+        myDiagram.nodeTemplate =
+            $(go.Node, "Auto",
+                $(go.Shape, "RoundedRectangle", { strokeWidth: 0 }, new go.Binding("fill", "color")),
+                $(go.TextBlock, { margin: 8 }, new go.Binding("text", "key"))
+            );
+        var model = $(go.TreeModel);
+        model.nodeDataArray = [
+            { key: "Root" },
+            { key: "Child 1", parent: "Root" },
+            { key: "Child 2", parent: "Root" }
+        ];
+        myDiagram.model = model;
+    </script>
+</body>
+</html>
