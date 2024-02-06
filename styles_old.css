@@ -1,0 +1,95 @@
+ .content-container {
+    max-width: 50%; /* Adjust this value to control the width of the content area */
+    margin: 20px auto; /* Adds some top and bottom margin for spacing, and auto margins on the sides for centering */
+  }
+  
+  img {
+    display: block; /* Makes the img block-level for margin auto to work */
+    margin: 0 auto; /* Centers the image */
+    max-width: 100%; /* Ensures images are responsive and don't overflow the container */
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    /* background-image: url('image.JPG'); Replace with the path to your image */
+    /* background-repeat: repeat; This allows the image to repeat */
+    /* background-size: 100px 100px; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* width: 1920; */
+    /* height: 1080; */
+    height: 100vh;    
+  }
+
+.container {
+  text-align: center;
+  display: flex;          /* Enable Flexbox */
+  height: 100vh;          /* Full height of the viewport */
+  justify-content: center;/* Center horizontally */
+  align-items: center;    /* Center vertically */
+  flex-direction: column;
+}
+
+.grid {
+  flex: 0 1 1200px; /* flex-grow, flex-shrink, flex-basis */
+  margin: 2% auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Example grid layout */
+  gap: 30px; /* Adjust gap between grid items */
+  max-width: 800px; /* Adjust based on your content */
+  width: 60%;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%; /* make image responsive */
+  height: auto;
+}
+
+.grid-item span {
+  display: block; /* ensures the caption is below the image */
+}
+
+.button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px; /* Adjust this value to space down from the top */
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.layout-container {
+  display: flex;
+  justify-content: center; /* Centers the children horizontally */
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 20px; /* Optional: Adds space between the containers */
+}
+
+.side-container {
+  flex: 1; /* Allows the side containers to grow and take up equal space */
+  /* Adjust padding or margin as needed for your links */
+}

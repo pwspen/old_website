@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.layout-container {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: flex-start;
+  width: 100%; /* Ensures the container takes the full width of its parent */
+}
+
+.side-container {
+  flex: 1; /* Allows side containers to grow */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack children vertically */
+  text-align: center; /* Center text */
+}
+
+.grid {
+  width: 50%; /* Sets the grid width to 60% of the layout container */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.grid-item span, .button {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.title-container {
+  width: auto;
+  margin: 0 auto;
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally in the cross axis */
+  justify-content: center; /* Center children vertically in the main axis */
+}
+
+.text-page-container {
+  max-width: 50%; /* Adjust this value to control the width of the content area */
+  margin: 20px auto; /* Adds some top and bottom margin for spacing, and auto margins on the sides for centering */
+}
+
+.text-page-container img {
+  display: block; /* Makes the image block-level for margin auto to work */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 100%; /* Ensures the image is responsive and fits within the container */
+}
