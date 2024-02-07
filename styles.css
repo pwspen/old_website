@@ -1,3 +1,9 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   position: relative;
@@ -6,23 +12,23 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 }
 
 .layout-container {
   display: flex;
   justify-content: center; /* Center children horizontally */
-  align-items: flex-start;
-  width: 100%; /* Ensures the container takes the full width of its parent */
+  /* width: 100%; Ensures the container takes the full width of its parent */
+  height: 100vh;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
 }
 
 .side-container {
-  flex: 1; /* Allows side containers to grow */
-  display: flex;
+  height: 100vh; 
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
   flex-direction: column; /* Stack children vertically */
-  text-align: center; /* Center text */
 }
 
 .grid {

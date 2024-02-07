@@ -85,7 +85,7 @@
 .layout-container {
   display: flex;
   justify-content: center; /* Centers the children horizontally */
-  align-items: flex-start; /* Aligns items to the top */
+  align-items: center; /* Aligns items to the top */
   gap: 20px; /* Optional: Adds space between the containers */
 }
 
