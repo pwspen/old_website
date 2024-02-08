@@ -28,16 +28,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.layout-container {
-  display: flex;
-  justify-content: center; /* Center children horizontally */
-  /* width: 100%; Ensures the container takes the full width of its parent */
-  height: 100vh;
-  flex-direction: row;
-  flex: 1;
-  align-items: center;
-}
-
 /* For some ungodly reason, putting .layout-container at the end of this file fixed things. It had to take precedent over something else */
 /* that was setting the layout-container align-items to flex-start. Try pasting layout-container into different places in here and in */
 /* styles.css to figure out what was overriding it. */
