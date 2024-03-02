@@ -36,12 +36,10 @@ body {
 }
 
 .grid {
-  flex: 2;
   align-items: center; /* Align grid to the top of the container */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
-  padding-top: 30px;;
 }
 
 .grid-item {
