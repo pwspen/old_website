@@ -11,7 +11,7 @@ customElements.define('side-buttons', MyContainer);
 
 project_list = { // tech type (hw, sw, both)
     "NASA Software Engineering": {
-        "img": "imgs/nasa-headshot.JPG",
+        "img": "imgs/nasa/nasa-headshot.JPG",
         "link": "projects/nasa-internship.html",
         "date": "2023",
         "Technology": "Both",
