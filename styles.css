@@ -1,12 +1,28 @@
-/* Test - is this being updated?? */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html, body {
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+html {
+  overflow-y: scroll;
   height: 100%;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 body {
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: Arial, sans-serif;
   position: relative;
   margin: 0;
@@ -17,11 +33,11 @@ body {
 }
 
 .layout-container {
-  padding-top: 30px;
+  padding-top: 40px;
   display: flex;
   justify-content: center; /* Center children horizontally */
   /* width: 100%; Ensures the container takes the full width of its parent */
-  height: calc(100% - 30px); /* Adjust this value to control the height of the container */
+  height: calc(100% - 40px); /* Adjust this value to control the height of the container */
   flex-direction: row;
   flex: 1;
   align-items: flex-start;
@@ -39,7 +55,7 @@ body {
   align-items: center; /* Align grid to the top of the container */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 30px;
+  gap: 50px;
 }
 
 .grid-item {
@@ -55,7 +71,7 @@ body {
   height: auto; /* Maintain aspect ratio */
 }
 
-.grid-item span, .button {
+.grid-item span {
   display: block;
 }
 
@@ -63,11 +79,11 @@ body {
   width: 200px;
   padding: 10px;
   margin: 10px 0px;
-  background-color: #4CAF50; /* Green background */
-  color: white; /* White text */
-  text-decoration: none; /* No underline */
-  border-radius: 5px; /* Rounded corners */
-  text-align: center; /* Center text */
+  color: white;
+  background-color: #3B82F6;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .title-container {
@@ -89,6 +105,7 @@ body {
 }
 
 .text-page-container {
+  padding-bottom: 30px;
   max-width: 50%; /* Adjust this value to control the width of the content area */
   margin: 20px auto; /* Adds some top and bottom margin for spacing, and auto margins on the sides for centering */
 }
@@ -97,4 +114,9 @@ body {
   display: block; /* Makes the image block-level for margin auto to work */
   margin: 0 auto; /* Centers the image horizontally */
   max-width: 100%; /* Ensures the image is responsive and fits within the container */
+}
+
+.active {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
