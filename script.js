@@ -9,12 +9,12 @@ customElements.define('side-buttons', MyContainer);
 
 ////////////////////////////////////////////////////////////////
 
-project_list = { // tech type (hw, sw, both)
+project_list = { // tech type (hw, sw, HW + SW)
     "NASA Software Engineering": {
         "img": "imgs/nasa/nasa-headshot.JPG",
         "link": "projects/nasa-internship.html",
         "date": "2023",
-        "Technology": "Both",
+        "Technology": "HW + SW",
         "Completion": "Completed",
         "Group type": "Team"},
     "Lunar Lander Propulsion + VTVL Rocket Testing": { 
@@ -28,21 +28,21 @@ project_list = { // tech type (hw, sw, both)
         "img": "imgs/2023/02/image-40.png", 
         "link": "projects/closed-loop-control-self-stabilizing-stick.html",
         "date": "2022",
-        "Technology": "Both",
+        "Technology": "HW + SW",
         "Completion": "Completed",
         "Group type": "Personal"},
     "Rocket Team: Propulsion Lead": { 
         "img": "imgs/2023/02/image-75.png", 
         "link": "projects/propulsion-lead.html",
         "date": "2020 - 2023",
-        "Technology": "Both",
+        "Technology": "HW + SW",
         "Completion": "Completed",
         "Group type": "Team (leader)"},
     "Rocket Team: Captain": { 
         "img": "imgs/2023/02/image-48.png", 
         "link": "projects/spaceport-2022-season.html",
         "date": "2022",
-        "Technology": "Both",
+        "Technology": "HW + SW",
         "Completion": "Completed",
         "Group type": "Team (leader)"},
     "Battery materials research": { 
@@ -56,7 +56,7 @@ project_list = { // tech type (hw, sw, both)
         "img": "imgs/2023/02/image-54.png", 
         "link": "projects/hopper.html",
         "date": "2022",
-        "Technology": "Both",
+        "Technology": "HW + SW",
         "Completion": "Completed",
         "Group type": "Team"},
     "L2 Rocket": { 
@@ -98,7 +98,7 @@ project_list = { // tech type (hw, sw, both)
 
 categories = {
     "Completion": ["Completed", "In Progress", "Concept"],
-    "Technology": ["Both", "Software", "Hardware"],
+    "Technology": ["HW + SW", "Software", "Hardware"],
     "Group type": ["Team (leader)", "Personal", "Team"]
 }
 // Allow for multiple categories

@@ -8,6 +8,41 @@ function App() {
       <SimplePage />
     </div>
   );
+
+  import React, { useState } from 'react';
+
+function SliderComponent() {
+  // State for the first slider
+  const [value1, setValue1] = useState(50);
+  // State for the second slider
+  const [value2, setValue2] = useState(50);
+
+  return (
+    <div>
+      {/* Slider 1 */}
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value={value1}
+        onChange={(e) => setValue1(e.target.value)}
+      />
+      <p>Value of slider 1: {value1}</p>
+
+      {/* Slider 2 */}
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value={value2}
+        onChange={(e) => setValue2(e.target.value)}
+      />
+      <p>Value of slider 2: {value2}</p>
+    </div>
+  );
+}
+
+export default SliderComponent;
   // return (
   //   <div className="App">
   //     <header className="App-header">
