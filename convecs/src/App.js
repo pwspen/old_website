@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import SimplePage from './SimplePage';
+import React, { useState } from 'react';
+
 
 function App() {
   return (
@@ -8,8 +10,6 @@ function App() {
       <SimplePage />
     </div>
   );
-
-  import React, { useState } from 'react';
 
 function SliderComponent() {
   // State for the first slider
@@ -42,7 +42,6 @@ function SliderComponent() {
   );
 }
 
-export default SliderComponent;
   // return (
   //   <div className="App">
   //     <header className="App-header">

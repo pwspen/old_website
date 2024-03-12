@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -108,12 +104,6 @@ body {
   padding-bottom: 30px;
   max-width: 50%; /* Adjust this value to control the width of the content area */
   margin: 20px auto; /* Adds some top and bottom margin for spacing, and auto margins on the sides for centering */
-}
-
-.text-page-container img {
-  display: block; /* Makes the image block-level for margin auto to work */
-  margin: 0 auto; /* Centers the image horizontally */
-  max-width: 100%; /* Ensures the image is responsive and fits within the container */
 }
 
 .active {
